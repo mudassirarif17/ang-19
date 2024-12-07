@@ -1,8 +1,37 @@
 <p>header works!</p>
 <h2 class="bg-sky-500">Hello from header</h2>
-@if(type == 1){
+<!-- @if(type == 1){
     <h1 class="bg-rose-500">hello from h1</h1>
 }
 @else{
     <h1 class="bg-slate-600">hello from other </h1>
+} -->
+
+<!-- @switch(type){
+    @case(1){
+        <h1>Hello from part 1</h1>
+    }
+    @case(2){
+        <h1>Hello from part 2</h1>
+    }
+    @case(3){
+        <h1>Hello from part 3</h1>
+    }
+    @default{
+        <h1>hello from other</h1>
+    }
+} -->
+
+<h1>{{options[0]}}</h1>
+<h1>{{options[1]}}</h1>
+<h1>{{options[2]}}</h1>
+<h1>{{options[3]}}</h1>
+
+<!-- @for(item of options : track by item){
+    <h1>{{item}}</h1>
 }
+@empty{
+    <h1>No element in array</h1>
+}
+ -->
+
