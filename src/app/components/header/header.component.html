@@ -1,5 +1,13 @@
-<p>header works!</p>
-<h2 class="bg-sky-500">Hello from header</h2>
+<div class="container w-[85vw] my-5 mx-auto">
+    <h2 class="text-center text-3xl font-medium my-10">Product Page</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  my-4 gap-y-4">
+        @for(item of products ; track $index){
+            <app-product-card [product]="item"></app-product-card>
+            }
+    </div>
+</div>
+
+
 <!-- @if(type == 1){
     <h1 class="bg-rose-500">hello from h1</h1>
 }
@@ -22,16 +30,14 @@
     }
 } -->
 
-<h1>{{options[0]}}</h1>
+<!-- <h1>{{options[0]}}</h1>
 <h1>{{options[1]}}</h1>
 <h1>{{options[2]}}</h1>
-<h1>{{options[3]}}</h1>
+<h1>{{options[3]}}</h1> -->
 
 <!-- @for(item of options : track by item){
     <h1>{{item}}</h1>
 }
 @empty{
     <h1>No element in array</h1>
-}
- -->
-
+} -->

@@ -1,0 +1,16 @@
+<!-- {{product | json}} -->
+<div class="card shadow w-[260px] px-6 py-5 mx-auto md:mx-0">
+        <div class="top-s flex justify-center">
+            <img class="w-[150px]" src="https://cdn.pixabay.com/photo/2013/07/12/15/34/shirt-150087_640.png" alt="">
+        </div>
+        <div class="desc mt-5">
+            <h1 class="text-xl font-medium">{{product.name}}</h1>
+            <p class="font-light text-sm">{{product.desc}}</p>
+            <div class="text-xl font-medium">
+                <span>Rs {{product.cprice}}</span>
+                <span class="px-1"><s> Rs {{product.sprice}}</s></span>
+                <span> ({{product.dis}}) OFF</span>
+            </div>
+            <button class="bg-sky-600 text-white px-5 py-1 rounded-md mt-2">Buy Now</button>
+        </div>
+    </div>
