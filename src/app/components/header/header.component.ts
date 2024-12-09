@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { CommonModule } from '@angular/common';
+import { SearchComponent } from '../search/search.component';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterOutlet , ProductCardComponent , CommonModule],
+  imports: [RouterOutlet , ProductCardComponent , SearchComponent , CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -54,4 +55,29 @@ export class HeaderComponent {
       "dis" : "50%"
     }
 ];
+
+filteredProduct : any[] = [];
+
+ngOnInit(){
+  this.filteredProduct = this.products;
+}
+
+onViewProduct(event:any){
+  console.log("onViewProduct" , event);
+}
+
+
+
+Onsearch(search : string){
+  console.log(search);
+  console.log("search");
+  if(search){
+      this.filteredProduct = this.products.filter(x => x.name.toLowerCase().includes(search.toLowerCase()));
+    }
+    else{
+      this.filteredProduct = this.products;
+    }
+}
+
+
 }

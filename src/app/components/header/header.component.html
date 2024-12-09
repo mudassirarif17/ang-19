@@ -1,8 +1,9 @@
 <div class="container w-[85vw] my-5 mx-auto">
     <h2 class="text-center text-3xl font-medium my-10">Product Page</h2>
+    <app-search (search)="Onsearch($event)"></app-search>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  my-4 gap-y-4">
-        @for(item of products ; track $index){
-            <app-product-card [product]="item"></app-product-card>
+        @for(item of filteredProduct ; track $index){
+            <app-product-card [product]="item" (viewProduct)="onViewProduct($event)"></app-product-card>
             }
     </div>
 </div>

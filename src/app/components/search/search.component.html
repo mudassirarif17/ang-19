@@ -1,0 +1,6 @@
+<div class="container w-[80vw] mx-auto">
+    <div class="search">
+        <input type="text" (change)="inputChange($event)" (keypress)="onTyping($event)" class="w-[90%] outline-none bg-gray-200 px-2 rounded-md py-2" placeholder="Search here">
+        <button class="bg-sky-600 text-white px-4 py-2 rounded-lg ml-1" (click)="onSearch()">Search</button>
+    </div>
+</div>
